@@ -44,9 +44,8 @@ void QuestionWaiting::DelQuestion(MathAddQuestion* question_ptr) {
 	question_ptr->hide();
 	delete question_ptr;
 }
-
-void QuestionWaiting::AddQuestion(int left, int opt, int right, int answer) {
-	MathAddQuestion* math_question = new MathAddQuestion(left, opt, right, answer, this);
+void QuestionWaiting::AddQuestion(const FORMULA& formula) {
+	MathAddQuestion* math_question = new MathAddQuestion(formula.left, formula.oper, formula.right, formula.answer, this);
 	connect(math_question, &MathAddQuestion::QuestionDelete, this, [=]() {
 		DelQuestion(math_question);
 		});

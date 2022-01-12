@@ -4,8 +4,7 @@
 #include <QIcon>
 #include <QKeyEvent>
 #include "MathAddQuestion.h"
-#include <Json/json.hpp>
-#include <fstream>
+#include "JsonMath.h"
 #include <utility>
 #include "FunctionCore.h"
 #include <random>

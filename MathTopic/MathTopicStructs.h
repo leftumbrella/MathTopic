@@ -12,6 +12,9 @@ struct FORMULA {
 	FORMULA() :left(0), oper(1), right(0), answer(0) {
 
 	}
+	FORMULA(int left_,int oper_ ,int right_ ,int answer_) :left(left_), oper(oper_), right(right_), answer(answer_) {
+
+	}
 };
 
 

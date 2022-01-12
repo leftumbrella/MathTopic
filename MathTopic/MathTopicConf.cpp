@@ -1,5 +1,5 @@
 #include "MathTopicConf.h"
-extern std::string MathSubjectsPath;
+
 MathTopicConf::MathTopicConf(QWidget *parent)
 	: QWidget(parent)
 	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
@@ -145,7 +145,7 @@ MathTopicConf::MathTopicConf(QWidget *parent)
 		connect(btn_ok, &QtMaterialFlatButton::clicked, this, [=]() {
 			QPlaySound(3);
 			_override_ptr->hideDialog(); 
-			if (SaveFormulas(true)==0) {
+			if (SaveFormulas(true)) {
 				_is_editing = false;
 				emit GoSelectSubject();
 			}
@@ -190,28 +190,15 @@ MathTopicConf::~MathTopicConf()
 
 bool MathTopicConf::load(const QString& sub_name) {
 	_is_editing = true;
-	std::ifstream file;
-	file.open(MathSubjectsPath, std::ios::in);
-	if (!file.is_open()) {
+	std::vector<FORMULA> formulas;
+	if (!JsonMath::instance()->ReadFormulas(formulas, sub_name.toStdString())) {
 		return false;
 	}
-	nlohmann::json js;
-	file >> js;
-	file.close();
-	nlohmann::json::const_iterator find_base = js.find("MathSubjects");
-	if (find_base != js.cend()) {
-		nlohmann::json::const_iterator find = find_base->find(sub_name.toStdString());
-		if (find != find_base->cend() && !find.value().empty()) {
-			ui.LE_name->setText(QString::fromStdString(find.key()));
-			nlohmann::json::const_iterator itr;
-			for (itr = find.value().cbegin(); itr != find.value().cend(); ++itr) {
-				std::string formula_str = itr.value();
-				if (!formula_str.empty()) {
-					AddFormula(formula_str);
-				}
-			}
-		}
+
+	for (const auto& formula : formulas) {
+		ui.WG_waitting->AddQuestion(formula);
 	}
+	
 	return true;
 }
 
@@ -277,8 +264,7 @@ void MathTopicConf::Push(int push_what) {
 
 void MathTopicConf::OverPush() {
 	if (!ui.WG_adder->empty()) {
-		FORMULA tmp = ui.WG_adder->GetFormula();
-		ui.WG_waitting->AddQuestion(tmp.left, tmp.oper, tmp.right, tmp.answer);
+		ui.WG_waitting->AddQuestion(ui.WG_adder->GetFormula());
 		ClearPush();
 	}
 }
@@ -290,16 +276,10 @@ void MathTopicConf::ClearPush() {
 }
 
 void MathTopicConf::on_btn_finish_clicked() {
-	int res = SaveFormulas();
-	switch (res)
-	{
-		case 0:
-			_is_editing = false;
-			emit GoSelectSubject();
-			break;
-	}
-
-	
+	if (SaveFormulas()) {
+		_is_editing = false;
+		emit GoSelectSubject();
+	}	
 }
 
 void MathTopicConf::on_CB_fast_toggled(bool) {
@@ -319,92 +299,19 @@ void MathTopicConf::on_CB_auto_answer_toggled(bool) {
 	ui.WG_waitting->AutoAnswerSwitch(ui.CB_auto_answer->isChecked());
 }
 
-void MathTopicConf::AddFormula(const std::string& formula_str) {
-	int left = 0, oper = 0, right = 0, answer = 0;
-	std::size_t opr_pos = -1;
-	if (formula_str.find('+') != -1) {
-		opr_pos = formula_str.find('+');
-		oper = 1;
-	}
-	else if (formula_str.find('-') != -1) {
-		opr_pos = formula_str.find('-');
-		oper = 2;
-	}
-	else if (formula_str.find('*') != -1) {
-		opr_pos = formula_str.find('*');
-		oper = 3;
-	}
-	else if (formula_str.find('/') != -1) {
-		opr_pos = formula_str.find('/');
-		oper = 4;
-	}
-	if (opr_pos != -1) {
-		left = boost::lexical_cast<int>(formula_str.substr(0, opr_pos));
-		std::size_t equal_pos = formula_str.find('=');
-		right = boost::lexical_cast<int>(formula_str.substr(opr_pos+1 , equal_pos-opr_pos-1));
-		answer = boost::lexical_cast<int>(formula_str.substr(equal_pos + 1, formula_str.size() - equal_pos-1));
-	}
-	ui.WG_waitting->AddQuestion(left, oper, right, answer);
-}
+bool MathTopicConf::SaveFormulas(bool is_override) {
 
-int MathTopicConf::SaveFormulas(bool is_override) {
-	std::ifstream file;
-	file.open(MathSubjectsPath, std::ios::in);
-	if (!file.is_open()) {
-		return -1;
-	}
-	nlohmann::json js;
-	file >> js;
-	file.close();
-
-	nlohmann::json::iterator find_base = js.find("MathSubjects");
-	if (find_base == js.cend()) {
-		return -2;
-	}
-	std::string subject_name = ui.LE_name->text().toStdString();
-	nlohmann::json::iterator find = find_base->find(subject_name);
-	if (find != find_base->cend()) {
+	if (JsonMath::instance()->HaveSubject(ui.LE_name->text().toStdString())) {
 		if (!_is_editing && !is_override) {
 			_override_ptr->showDialog();
-			return -1;
+			return false;
 		}
-		find_base->erase(find);
 	}
 
 	std::vector<FORMULA> formulas;
 	if (!ui.WG_waitting->GetQuestions(formulas)) {
-		return -3;
-	}
-	for (std::vector<FORMULA>::const_iterator itr = formulas.cbegin(); itr != formulas.cend(); ++itr) {
-		js["MathSubjects"][subject_name].push_back(Formula2Str(*itr));
+		return false;
 	}
 
-	std::fstream file_out;
-	file_out.open(MathSubjectsPath, std::ios::out);
-	if (!file_out.is_open()) {
-		return -4;
-	}
-	file_out << std::setw(4) << js << std::endl;
-	file_out.close();
-
-
-	return 0;
-}
-
-std::string MathTopicConf::Formula2Str(const FORMULA& formula) {
-	std::string over_str;
-
-	over_str += boost::lexical_cast<std::string>(formula.left);
-	switch (formula.oper){
-		case 1:	over_str += '+';	break;
-		case 2:	over_str += '-';	break;
-		case 3:	over_str += '*';	break;
-		case 4:	over_str += '/';	break;
-		default: return "";
-	}
-	over_str += boost::lexical_cast<std::string>(formula.right);
-	over_str += '=';
-	over_str += boost::lexical_cast<std::string>(formula.answer);
-
-	return over_str;
+	return JsonMath::instance()->WriteFormulas(formulas,ui.LE_name->text().toStdString() );
 }

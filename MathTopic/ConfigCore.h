@@ -4,16 +4,15 @@
 #include <Json/json.hpp>
 #include <fstream>
 #include <iomanip>
+#include "FileTools.h"
 #include <sstream>
 #include <boost/lexical_cast.hpp>
 #include <boost/filesystem.hpp>
 
-const std::string CONFIG_NAME = "config.json";
-
 class ConfigCore {
 public:
 	static ConfigCore* instance();
-	void SetPath(const std::string& path_str);
+	bool SetPath(const std::string& path_str);
 	std::string ReadValue(const char* key_str ,...);
 	template <typename T> bool SetValue(const T& value ,const char* key_str ,...);
 private:

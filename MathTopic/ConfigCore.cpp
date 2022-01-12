@@ -8,13 +8,12 @@ ConfigCore* ConfigCore::instance() {
 	return _instance;
 }
 
-void ConfigCore::SetPath(const std::string& path_str) {
-	_path_str = path_str;
-	boost::filesystem::path config_path(_path_str);
-	if (!boost::filesystem::is_directory(config_path)) {
-		boost::filesystem::create_directories(config_path);
+bool ConfigCore::SetPath(const std::string& path_str) {
+	if (!FileTools::CreateFile(path_str)) {
+		return false;
 	}
-	_path_str = _path_str + "/" + CONFIG_NAME;
+	_path_str = path_str;
+	return true;
 }
 
 std::string ConfigCore::ReadValue(const char* key_str ,...) {

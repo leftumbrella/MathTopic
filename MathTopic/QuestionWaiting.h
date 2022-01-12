@@ -4,12 +4,11 @@
 #include <QVBoxLayout>
 #include <vector>
 #include "MathAddQuestion.h"
-class QuestionWaiting : public QWidget
-{
+class QuestionWaiting : public QWidget {
 	Q_OBJECT
 
 public:
-	QuestionWaiting(QWidget*parent = Q_NULLPTR);
+	QuestionWaiting(QWidget* parent = Q_NULLPTR);
 	~QuestionWaiting();
 
 	bool GetQuestions(std::vector<FORMULA>& formulas) const;
@@ -20,8 +19,7 @@ private slots:
 	void DelQuestion(MathAddQuestion* question_ptr);
 
 public slots:
-	void AddQuestion(int left, int opt, int right, int answer);
-
+	void AddQuestion(const FORMULA& formula);
 
 
 private:

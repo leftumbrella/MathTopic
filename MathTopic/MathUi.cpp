@@ -1,5 +1,5 @@
 #include "MathUi.h"
-extern std::string MathSubjectsPath;
+
 void MathUi::keyPressEvent(QKeyEvent* event) {
 	
 	switch (event->key())
@@ -218,28 +218,14 @@ void MathUi::load(const QString& name) {
 	_is_commited = false;
 	_sub_name = name;
 	_model = Subject;
-	std::ifstream file;
-	file.open(MathSubjectsPath, std::ios::in);
-	if (!file.is_open()) {
-		return;
-	}
-	nlohmann::json js;
-	file >> js;
-	file.close();
-	nlohmann::json::const_iterator find_base = js.find("MathSubjects");
-	if (find_base != js.cend()) {
-		nlohmann::json::const_iterator find = find_base->find(name.toStdString());
-		if (find != find_base->cend() && !find.value().empty()) {
-			ui.label->setText(QString::fromStdString(find.key()));
-			nlohmann::json::const_iterator itr;
-			for (itr = find.value().cbegin(); itr != find.value().cend(); ++itr) {
-				std::string formula_str = itr.value();
-				if (!formula_str.empty()) {
-					_formulas.push_back( std::make_pair(Str2Formula(*itr) ,0) );
-				}
-			}
+	
+	std::vector<FORMULA> formulas;
+	if (JsonMath::instance()->ReadFormulas(formulas, name.toStdString())) {
+		for (const auto& formula : formulas) {
+			_formulas.push_back(std::make_pair(formula, 0));
 		}
 	}
+
 	_subject_start_time = clock();
 	ui.LB_all_star->setText(" X 0");
 }

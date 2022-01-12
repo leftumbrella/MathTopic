@@ -1,7 +1,6 @@
 #pragma once
 
-#include <QWidget>
-#include <Json/json.hpp>
+#include "JsonMath.h"
 #include <fstream>
 #include <iomanip>
 #include <sstream>

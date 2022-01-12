@@ -63,6 +63,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(CPPLibrarysDir)onlyhead;$(CPPLibrarysDir)boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(CPPLibrarysDir)boost\lib</AdditionalLibraryDirectories>
@@ -71,6 +72,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(CPPLibrarysDir)onlyhead;$(CPPLibrarysDir)boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(CPPLibrarysDir)boost\lib</AdditionalLibraryDirectories>
@@ -150,7 +152,9 @@
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle.cpp" />
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle_internal.cpp" />
     <ClCompile Include="EndUi.cpp" />
+    <ClCompile Include="FileTools.cpp" />
     <ClCompile Include="FrontPage.cpp" />
+    <ClCompile Include="JsonMath.cpp" />
     <ClCompile Include="MathAddQuestion.cpp" />
     <ClCompile Include="MathTopicConf.cpp" />
     <ClCompile Include="MathUi.cpp" />
@@ -186,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="EndUi.h" />
+    <ClInclude Include="FileTools.h" />
     <ClInclude Include="FunctionCore.h" />
     <QtMoc Include="SubjectChooser.h" />
     <QtMoc Include="SubjectsUi.h" />
@@ -194,6 +199,7 @@
     <QtMoc Include="MathTopicConf.h" />
     <QtMoc Include="MathAddQuestion.h" />
     <QtMoc Include="QuestionWaiting.h" />
+    <ClInclude Include="JsonMath.h" />
     <ClInclude Include="MathTopicDefines.h" />
     <ClInclude Include="MathTopicStructs.h" />
     <ClInclude Include="resource.h" />

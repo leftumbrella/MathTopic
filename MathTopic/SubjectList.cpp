@@ -1,6 +1,6 @@
 #include "SubjectList.h"
 
-extern std::string MathSubjectsPath;
+
 
 SubjectList::SubjectList(QWidget *parent)
 	: QWidget(parent)
@@ -90,22 +90,11 @@ void SubjectList::showEvent(QShowEvent* event) {
 
 	ui.WG_Subjects->ClearAll();
 
-	std::ifstream file;
-	file.open(MathSubjectsPath, std::ios::in);
-	if (!file.is_open()) {
-		return;
+	std::vector<std::string> subjects;
+	JsonMath::instance()->ReadSubjects(subjects);
+	for (const auto& subject : subjects) {
+		ui.WG_Subjects->AddSubject(QString::fromStdString(subject));
 	}
-	nlohmann::json js;
-	file >> js;
-	file.close();	
-	nlohmann::json::const_iterator find = js.find("MathSubjects");
-	if (find != js.cend()) {
-		nlohmann::json::const_iterator itr;
-		for (itr = find->cbegin(); itr != find->cend(); ++itr) {
-			ui.WG_Subjects->AddSubject(QString::fromStdString(itr.key()));
-		}
-	}
-	
 }
 
 void SubjectList::on_btn_add_clicked() {

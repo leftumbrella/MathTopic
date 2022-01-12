@@ -191,7 +191,7 @@ void MathAddQuestion::on_btn_add_edit_clicked() {
 		int right_num = ui.LE_right->text().toInt();
 		int answer_num = ui.LE_answer->text().toInt();
 		int opt_num = ui.CB_operator->currentIndex() + 1;
-		emit QuestionAdd(left_num, opt_num, right_num, answer_num);
+		emit QuestionAdd(FORMULA(left_num, opt_num, right_num, answer_num));
 		ui.LE_left->setText("");
 		ui.LE_right->setText("");
 		ui.LE_answer->setText("");

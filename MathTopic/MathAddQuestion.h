@@ -14,7 +14,7 @@ private:
 	};
 
 signals:
-	void QuestionAdd(int left, int oper, int right ,int answer);
+	void QuestionAdd( const FORMULA& formula);
 	void QuestionDelete();
 private:
 	void Initialize();

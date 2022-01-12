@@ -2,12 +2,11 @@
 
 #include <QWidget>
 #include <QShowEvent>
-#include <fstream>
+#include "JsonMath.h"
 #include "FunctionCore.h"
 #include <qtmaterialfab.h>
 #include <QLabel>
 #include <qtmaterialdialog.h>
-#include <Json/json.hpp>
 #include "ui_SubjectList.h"
 
 class SubjectList : public QWidget

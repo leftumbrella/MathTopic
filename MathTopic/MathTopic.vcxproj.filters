@@ -271,6 +271,12 @@
     <ClCompile Include="MathTopicConf.cpp">
       <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
     </ClCompile>
+    <ClCompile Include="FileTools.cpp">
+      <Filter>封装类与头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonMath.cpp">
+      <Filter>封装类与头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar.h">
@@ -608,6 +614,12 @@
       <Filter>封装类与头文件</Filter>
     </ClInclude>
     <ClInclude Include="MathTopicDefines.h">
+      <Filter>封装类与头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTools.h">
+      <Filter>封装类与头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonMath.h">
       <Filter>封装类与头文件</Filter>
     </ClInclude>
   </ItemGroup>

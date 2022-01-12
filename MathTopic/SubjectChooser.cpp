@@ -1,5 +1,5 @@
 #include "SubjectChooser.h"
-extern std::string MathSubjectsPath;
+
 SubjectChooser::SubjectChooser(QWidget *parent)
 	: QWidget(parent)
 	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
@@ -105,19 +105,11 @@ void SubjectChooser::showEvent(QShowEvent* event) {
 
 	ui.WG_Subjects->ClearAll();
 
-	std::ifstream file;
-	file.open(MathSubjectsPath, std::ios::in);
-	if (!file.is_open()) {
-		return;
-	}
-	nlohmann::json js;
-	file >> js;
-	file.close();
-	nlohmann::json::const_iterator find = js.find("MathSubjects");
-	if (find != js.cend()) {
-		nlohmann::json::const_iterator itr;
-		for (itr = find->cbegin(); itr != find->cend(); ++itr) {
-			ui.WG_Subjects->AddSubject(QString::fromStdString(itr.key()));
+	std::vector<std::string> subjects;
+
+	if (JsonMath::instance()->ReadSubjects(subjects)) {
+		for (const auto& subject : subjects) {
+			ui.WG_Subjects->AddSubject( QString::fromStdString(subject) );
 		}
 	}
 }

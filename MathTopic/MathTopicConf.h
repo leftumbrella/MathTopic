@@ -1,19 +1,15 @@
 #pragma once
 
 #include <QWidget>
-#include <fstream>
-#include <Json/json.hpp>
-#include <iomanip>
-#include <sstream>
 #include <QToolTip>
 #include <QKeyEvent>
 #include <QShowEvent>
-
 #include <qtmaterialfab.h>
 #include <QLabel>
 #include <qtmaterialdialog.h>
 #include <boost/lexical_cast.hpp>
 #include "FunctionCore.h"
+#include "JsonMath.h"
 #include "ui_MathTopicConf.h"
 
 class MathTopicConf : public QWidget
@@ -42,9 +38,7 @@ private slots:
 	void on_CB_fast_toggled(bool);
 	void on_CB_auto_answer_toggled(bool);
 private:
-	void AddFormula(const std::string& formula_str);
-	int SaveFormulas(bool is_override = false);
-	std::string Formula2Str(const FORMULA& formula);
+	bool SaveFormulas(bool is_override = false);
 private:
 	Ui::MathTopicConf ui;
 	QtMaterialFloatingActionButton* _btn_close_ptr;

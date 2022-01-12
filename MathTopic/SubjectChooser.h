@@ -6,6 +6,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QShowEvent>
+#include "JsonMath.h"
 #include <qtmaterialdialog.h>
 #include "ui_SubjectChooser.h"
 
