@@ -6,10 +6,12 @@
 #include <Json/json.hpp>
 
 std::string MathSubjectsPath;
-QMediaPlayer* G_Player_ptr = new QMediaPlayer;
+QMediaPlayer* G_Player_ptr = nullptr;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+	G_Player_ptr = new QMediaPlayer;
 
 	//…Ë÷√QToolTip—’…´
 	QPalette palette = QToolTip::palette();
