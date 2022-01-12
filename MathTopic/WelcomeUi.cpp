@@ -2,10 +2,10 @@
 #include "QIcon"
 
 WelcomeUi::WelcomeUi(QWidget *parent)
-	: QWidget(parent), _btn_setting_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/setting.png"),this))
-	, _btn_statistics_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/actionstatistical.png"), this))
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
-	, _btn_data_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/data.png"), this))
+	: QWidget(parent), _btn_setting_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/setting.png"),this))
+	, _btn_statistics_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/actionstatistical.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
+	, _btn_data_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/data.png"), this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))	
 {
 	ui.setupUi(this);
@@ -31,8 +31,8 @@ WelcomeUi::WelcomeUi(QWidget *parent)
 		emit GoData();
 		});
 
-	ui.btn_xunlian-> setIcon(QIcon(":/MathTopic/xunlian.png"));
-	ui.btn_kaoshi->setIcon(QIcon(":/MathTopic/kaoshi.png"));
+	ui.btn_xunlian-> setIcon(QIcon(":/Resources/image/xunlian.png"));
+	ui.btn_kaoshi->setIcon(QIcon(":/Resources/image/kaoshi.png"));
 
 
 	_btn_setting_ptr->setCorner(Qt::BottomLeftCorner);

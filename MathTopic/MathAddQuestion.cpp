@@ -11,7 +11,7 @@ void MathAddQuestion::Initialize() {
 	ui.btn_add_edit->setIconSize(QSize(50, 50));
 	ui.btn_add_edit->setColor("#00b483");
 
-	ui.btn_delete->setIcon(QIcon(":/MathTopic/delete.png"));
+	ui.btn_delete->setIcon(QIcon(":/Resources/image/delete.png"));
 	ui.btn_delete->setColor("#89303f");
 	ui.btn_delete->setIconSize(QSize(50, 50));
 
@@ -56,7 +56,7 @@ MathAddQuestion::MathAddQuestion(QWidget *parent)
 {
 	ui.setupUi(this);
 	ui.btn_add_edit->setDisabled(true);
-	ui.btn_add_edit->setIcon(QIcon(":/MathTopic/add.png"));
+	ui.btn_add_edit->setIcon(QIcon(":/Resources/image/add.png"));
 
 	ui.btn_delete->hide();
 	Initialize();
@@ -66,7 +66,7 @@ MathAddQuestion::MathAddQuestion(bool is_edit, QWidget* parent /*= Q_NULLPTR*/)
 	:QWidget(parent),_is_auto_answer(false) {
 	ui.setupUi(this);
 	if (is_edit) {
-		ui.btn_add_edit->setIcon(QIcon(":/MathTopic/edit.png"));
+		ui.btn_add_edit->setIcon(QIcon(":/Resources/image/edit.png"));
 		
 		_model = EditWait;
 		ui.LE_left->setEnabled(false);
@@ -74,7 +74,7 @@ MathAddQuestion::MathAddQuestion(bool is_edit, QWidget* parent /*= Q_NULLPTR*/)
 		ui.LE_answer->setEnabled(false);
 		ui.CB_operator->setEditable(false);
 	}else {
-		ui.btn_add_edit->setIcon(QIcon(":/MathTopic/add.png"));
+		ui.btn_add_edit->setIcon(QIcon(":/Resources/image/add.png"));
 		_model = AddWait;
 	}
 	Initialize();
@@ -83,8 +83,8 @@ MathAddQuestion::MathAddQuestion(bool is_edit, QWidget* parent /*= Q_NULLPTR*/)
 MathAddQuestion::MathAddQuestion(int left, int oper, int right, int answer, QWidget* parent /*= Q_NULLPTR*/)
 	:QWidget(parent) {
 	ui.setupUi(this);
-	ui.btn_add_edit->setIcon(QIcon(":/MathTopic/edit.png"));
-	ui.btn_delete->setIcon(QIcon(":/MathTopic/delete.png"));
+	ui.btn_add_edit->setIcon(QIcon(":/Resources/image/edit.png"));
+	ui.btn_delete->setIcon(QIcon(":/Resources/image/delete.png"));
 
 	_model = EditWait;
 	ui.LE_left->setEnabled(false);
@@ -201,7 +201,7 @@ void MathAddQuestion::on_btn_add_edit_clicked() {
 		ui.LE_left->setEnabled(true);
 		ui.LE_right->setEnabled(true);
 		ui.CB_operator->setEnabled(true);
-		ui.btn_add_edit->setIcon(QIcon(":/MathTopic/finish.png"));
+		ui.btn_add_edit->setIcon(QIcon(":/Resources/image/finish.png"));
 		ui.btn_add_edit->setColor("#00b483");
 		_model = Editing;
 		break;
@@ -210,7 +210,7 @@ void MathAddQuestion::on_btn_add_edit_clicked() {
 		ui.LE_right->setEnabled(false);
 		ui.LE_answer->setEnabled(false);
 		ui.CB_operator->setEnabled(false);
-		ui.btn_add_edit->setIcon(QIcon(":/MathTopic/edit.png"));
+		ui.btn_add_edit->setIcon(QIcon(":/Resources/image/edit.png"));
 		ui.btn_add_edit->setColor("#f2c04d");
 		_model = EditWait;
 		break;

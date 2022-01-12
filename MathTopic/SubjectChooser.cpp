@@ -2,10 +2,10 @@
 extern std::string MathSubjectsPath;
 SubjectChooser::SubjectChooser(QWidget *parent)
 	: QWidget(parent)
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
-	, _btn_statistics_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/actionstatistical.png"), this))
-	, _btn_data_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/data.png"), this))
-	, _btn_setting_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/setting.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
+	, _btn_statistics_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/actionstatistical.png"), this))
+	, _btn_data_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/data.png"), this))
+	, _btn_setting_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/setting.png"), this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))
 {
 	ui.setupUi(this);

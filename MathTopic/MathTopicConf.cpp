@@ -2,8 +2,8 @@
 extern std::string MathSubjectsPath;
 MathTopicConf::MathTopicConf(QWidget *parent)
 	: QWidget(parent)
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
-	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/home.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
+	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/home.png"), this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))
 	, _info_dialog_ptr(new QtMaterialDialog(this))
 	, _override_ptr(new QtMaterialDialog(this))
@@ -30,8 +30,8 @@ MathTopicConf::MathTopicConf(QWidget *parent)
 	ui.CB_fast->setToolTip(QStringLiteral("进入快速模式后，答案始终为自动计算\n输入数字及“+、-、*、/”符号系统自动保存\n完成后按下“Enter键”将其添加到列表中\n您也可以按下“Delete”键来删除输入的缓存？\n例如:输入 “1” “+” “1” “Enter”"));
 
 	
-	ui.btn_select->setIcon(QIcon(":/MathTopic/select_other.png"));
-	ui.btn_finish->setIcon(QIcon(":/MathTopic/btn_over.png"));
+	ui.btn_select->setIcon(QIcon(":/Resources/image/select_other.png"));
+	ui.btn_finish->setIcon(QIcon(":/Resources/image/btn_over.png"));
 
 	connect(ui.btn_select, &QtMaterialRaisedButton::clicked, this, [=]() {
 		QPlaySound(3);

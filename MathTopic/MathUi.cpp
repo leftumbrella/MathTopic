@@ -59,8 +59,8 @@ void MathUi::showEvent(QShowEvent* event) {
 
 MathUi::MathUi(QWidget* parent)
 	: QWidget(parent), _question_num(1)
-	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/home.png"), this))
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
+	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/home.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
 	, _home_dialog_ptr(new QtMaterialDialog(this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))
 	, _snackbar(new QtMaterialSnackbar(this))
@@ -69,7 +69,7 @@ MathUi::MathUi(QWidget* parent)
 {
 	ui.setupUi(this);
 
-	ui.btn_all_star->setIcon(QIcon(":/MathTopic/star.png"));
+	ui.btn_all_star->setIcon(QIcon(":/Resources/image/star.png"));
 	ui.btn_all_star->setColor(Qt::yellow);
 
 	ui.btn_all_star->setFocusPolicy(Qt::NoFocus);
@@ -83,9 +83,9 @@ MathUi::MathUi(QWidget* parent)
 	_btn_home_ptr->setToolTip(QStringLiteral("主页"));
 	_btn_close_ptr->setToolTip(QStringLiteral("关闭软件"));
 
-	ui.btn_commit->setIcon(QIcon(":/MathTopic/commit.png"));
-	ui.btn_next->setIcon(QIcon(":/MathTopic/next.png"));
-	ui.btn_hideKey->setIcon(QIcon(":/MathTopic/hide.png"));
+	ui.btn_commit->setIcon(QIcon(":/Resources/image/commit.png"));
+	ui.btn_next->setIcon(QIcon(":/Resources/image/next.png"));
+	ui.btn_hideKey->setIcon(QIcon(":/Resources/image/hide.png"));
 	connect(ui.btn_hideKey, &QtMaterialRaisedButton::clicked, this, &MathUi::HideKey);
 
 	_btn_home_ptr->setCorner(Qt::TopLeftCorner);
@@ -274,7 +274,7 @@ void MathUi::Commit() {
 			StatisticsUseTime();
 			StatisticsPlusNum(true);
 		}		
-		ui.btn_star->setIcon(QIcon(":/MathTopic/star.png"));
+		ui.btn_star->setIcon(QIcon(":/Resources/image/star.png"));
 
 		ui.btn_star->setColor(Qt::yellow);
 		ui.btn_star->click();
@@ -290,7 +290,7 @@ void MathUi::Commit() {
 			_formulas[_question_num - 1].second = 2;
 		}
 		StatisticsPlusNum(false);
-		ui.btn_star->setIcon(QIcon(":/MathTopic/question_area.png"));
+		ui.btn_star->setIcon(QIcon(":/Resources/image/question_area.png"));
 		ui.btn_star->setColor("#a22041");
 		ui.btn_star->click();
 		QString info_str = QStringLiteral("正确答案是 “%1” 哦！").arg(real_answer);

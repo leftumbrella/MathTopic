@@ -21,12 +21,12 @@ void EndUi::ChangeOver(const QString& subname ,int ok_num, int error_num, std::t
 
 EndUi::EndUi(QWidget *parent)
 	: QWidget(parent)
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))
 {
 	ui.setupUi(this);
 
-	ui.btn_all_star->setIcon(QIcon(":/MathTopic/star.png"));
+	ui.btn_all_star->setIcon(QIcon(":/Resources/image/star.png"));
 	ui.btn_all_star->setIconSize(QSize(50, 50));
 	ui.btn_all_star->setColor(Qt::yellow);
 
@@ -35,8 +35,8 @@ EndUi::EndUi(QWidget *parent)
 	ui.btn_home->setBackgroundColor("#168570");
 	ui.btn_again->setBackgroundColor("#a381ba");
 
-	ui.btn_home->setIcon(QIcon(":/MathTopic/home.png"));
-	ui.btn_again->setIcon(QIcon(":/MathTopic/retry.png"));
+	ui.btn_home->setIcon(QIcon(":/Resources/image/home.png"));
+	ui.btn_again->setIcon(QIcon(":/Resources/image/retry.png"));
 	connect(ui.btn_home, &QtMaterialRaisedButton::clicked, this, &EndUi::GoHome);
 	connect(ui.btn_again, &QtMaterialRaisedButton::clicked, this, [=]() {
 		QPlaySound(3);

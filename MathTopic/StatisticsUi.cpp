@@ -2,7 +2,7 @@
 
 StatisticsUi::StatisticsUi(QWidget *parent)
 	: QWidget(parent)
-	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/home.png"), this))
+	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/home.png"), this))
 {
 	ui.setupUi(this);
 	_btn_home_ptr->setCorner(Qt::TopLeftCorner);
@@ -12,7 +12,7 @@ StatisticsUi::StatisticsUi(QWidget *parent)
 		QPlaySound(3);
 		emit GoWelcome();
 		});
-	ui.btn_all_star->setIcon(QIcon(":/MathTopic/star.png"));
+	ui.btn_all_star->setIcon(QIcon(":/Resources/image/star.png"));
 	ui.btn_all_star->setIconSize(QSize(50, 50));
 	ui.btn_all_star->setColor(Qt::yellow);
 

@@ -9,11 +9,11 @@ SubjectOne::SubjectOne(const QString& name, QWidget* parent, bool have_delete)
 		ui.btn_delete->hide();
 	}
 
-	ui.btn_delete->setIcon(QIcon(":/MathTopic/delete.png"));
+	ui.btn_delete->setIcon(QIcon(":/Resources/image/delete.png"));
 	ui.btn_delete->setColor("#89303f");
 	ui.btn_delete->setIconSize(QSize(50, 50));
 	ui.btn_subject->setText(_name);
-	ui.btn_subject->setIcon(QIcon(":/MathTopic/subject.png"));
+	ui.btn_subject->setIcon(QIcon(":/Resources/image/subject.png"));
 }
 
 SubjectOne::~SubjectOne()

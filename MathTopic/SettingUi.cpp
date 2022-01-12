@@ -2,7 +2,7 @@
 
 SettingUi::SettingUi(QWidget *parent)
 	: QWidget(parent)
-	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/home.png"), this))
+	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/home.png"), this))
 {
 	ui.setupUi(this);
 
@@ -41,7 +41,7 @@ void SettingUi::showEvent(QShowEvent* event) {
 
 void SettingUi::SoundChanged(bool is_open) {
 	if (is_open) {
-		QSound::play(":/MathTopic/push.wav");
+		QSound::play(":/Resources/image/push.wav");
 	}
 	ConfigCore::instance()->SetValue(is_open, "BaseSetting", "Sound", nullptr);
 }

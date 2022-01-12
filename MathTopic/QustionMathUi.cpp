@@ -5,9 +5,9 @@ QustionMathUi::QustionMathUi(QWidget *parent)
 	, _dialog_ptr(new QtMaterialDialog(this))
 {
 	ui.setupUi(this);
-	ui.btn_return->setIcon(QIcon(":/MathTopic/return.png"));
+	ui.btn_return->setIcon(QIcon(":/Resources/image/return.png"));
 	ui.btn_return->setBackgroundColor("#9bae86");
-	ui.btn_start->setIcon(QIcon(":/MathTopic/start.png"));
+	ui.btn_start->setIcon(QIcon(":/Resources/image/start.png"));
 	ui.btn_start->setBackgroundColor("#a381ba");
 	connect(ui.btn_return, &QtMaterialRaisedButton::clicked, this, &QustionMathUi::Return);
 	connect(ui.btn_return, &QtMaterialRaisedButton::clicked, this, [=]() {

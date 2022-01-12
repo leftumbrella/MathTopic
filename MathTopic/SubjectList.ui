@@ -188,6 +188,8 @@ background: transparent;
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="MathTopic.qrc"/>
+ </resources>
  <connections/>
 </ui>

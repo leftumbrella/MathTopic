@@ -72,7 +72,7 @@ void FrontPage::ShowTrain() {
 }
 
 void FrontPage::Start(int type) {
-	//_btn_close_ptr->setIcon(QIcon(":/MathTopic/home.png"));
+	//_btn_close_ptr->setIcon(QIcon(":/Resources/image/home.png"));
 	switch (type)
 	{
 	case 2:	ui.stackedWidget->setCurrentWidget(ui.PG_math);	break;

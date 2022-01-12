@@ -4,8 +4,8 @@ extern std::string MathSubjectsPath;
 
 SubjectList::SubjectList(QWidget *parent)
 	: QWidget(parent)
-	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/close.png"), this))
-	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/MathTopic/home.png"), this))
+	, _btn_close_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/close.png"), this))
+	, _btn_home_ptr(new QtMaterialFloatingActionButton(QIcon(":/Resources/image/home.png"), this))
 	, _close_dialog_ptr(new QtMaterialDialog(this))
 {
 	ui.setupUi(this);
@@ -13,7 +13,7 @@ SubjectList::SubjectList(QWidget *parent)
 	ui.btn_add->setBackgroundColor("#168570");
 
 	connect(ui.WG_Subjects, &SubjectsUi::SubjectSelect, this, &SubjectList::SubjectSelect);
-	ui.btn_add->setIcon(QIcon(":/MathTopic/add_new.png"));
+	ui.btn_add->setIcon(QIcon(":/Resources/image/add_new.png"));
 
 	_btn_close_ptr->setCorner(Qt::TopRightCorner);
 	_btn_close_ptr->setBackgroundColor("#973444");

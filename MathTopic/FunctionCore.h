@@ -20,7 +20,7 @@ static void QPlaySound(int type) {
 		G_Player_ptr->play();
 		break;
 	}
-	case 3:	QSound::play(":/MathTopic/push.wav");	break;
-	case 4:	QSound::play(":/MathTopic/message.wav");	break;
+	case 3:	QSound::play(":/Resources/sound/push.wav");	break;
+	case 4:	QSound::play(":/Resources/sound/message.wav");	break;
 	}
 }
