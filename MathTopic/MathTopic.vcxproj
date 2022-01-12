@@ -62,18 +62,18 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(SolutionDir)Librarys;$(SolutionDir)Librarys\boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(CPPLibrarysDir)onlyhead;$(CPPLibrarysDir)boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)Librarys\boost\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CPPLibrarysDir)boost\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_);$(SolutionDir)Librarys;$(SolutionDir)Librarys\boost\include;.\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(CPPLibrarysDir)onlyhead;$(CPPLibrarysDir)boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)Librarys\boost\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CPPLibrarysDir)boost\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -154,7 +154,6 @@
     <ClCompile Include="MathAddQuestion.cpp" />
     <ClCompile Include="MathTopicConf.cpp" />
     <ClCompile Include="MathUi.cpp" />
-    <ClCompile Include="MemoryStatus.cpp" />
     <ClCompile Include="QuestionWaiting.cpp" />
     <ClCompile Include="QustionMathUi.cpp" />
     <ClCompile Include="SettingUi.cpp" />
@@ -194,8 +193,9 @@
     <QtMoc Include="SubjectList.h" />
     <QtMoc Include="MathTopicConf.h" />
     <QtMoc Include="MathAddQuestion.h" />
-    <ClInclude Include="MemoryStatus.h" />
     <QtMoc Include="QuestionWaiting.h" />
+    <ClInclude Include="MathTopicDefines.h" />
+    <ClInclude Include="MathTopicStructs.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />
     <QtMoc Include="StatisticsUi.h" />

@@ -1,34 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
-    </Filter>
-    <Filter Include="Translation Files">
-      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
-      <Extensions>ts</Extensions>
-    </Filter>
-    <Filter Include="设置界面">
-      <UniqueIdentifier>{36da58f1-67d1-4dad-b45a-5aa42b36fd45}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="小工具">
-      <UniqueIdentifier>{305d1536-dd46-4787-9a12-bc1515fcbdf9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="统计界面">
-      <UniqueIdentifier>{49c2071e-23dc-4531-8983-2f15e8b15144}</UniqueIdentifier>
     </Filter>
     <Filter Include="外部库">
       <UniqueIdentifier>{8758549e-84fa-4c0f-a8e4-e2628d8b8adf}</UniqueIdentifier>
@@ -36,46 +11,64 @@
     <Filter Include="外部库\QtMaterialWidgets">
       <UniqueIdentifier>{abfdd595-bf5e-44f4-99ac-15c00f84854b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="主界面">
-      <UniqueIdentifier>{d42df7f0-acf1-4de5-ba38-034705f57324}</UniqueIdentifier>
+    <Filter Include="界面容器">
+      <UniqueIdentifier>{000232d2-4c17-4dae-bdb9-001a8b24a11f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="欢迎页">
-      <UniqueIdentifier>{0bb0bc19-291f-4225-8714-bd0c0298dae7}</UniqueIdentifier>
+    <Filter Include="界面容器\主界面">
+      <UniqueIdentifier>{55cb5c2b-bc63-47b6-b190-ea95cafbe47c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="作答界面">
-      <UniqueIdentifier>{2d27d292-27b9-49d1-beab-68b96a7cc5ec}</UniqueIdentifier>
+    <Filter Include="界面容器\主界面\设置界面">
+      <UniqueIdentifier>{36da58f1-67d1-4dad-b45a-5aa42b36fd45}</UniqueIdentifier>
     </Filter>
-    <Filter Include="科目选择界面">
-      <UniqueIdentifier>{77062f24-e534-43de-be9c-b8b8be5eff59}</UniqueIdentifier>
+    <Filter Include="界面容器\主界面\统计界面">
+      <UniqueIdentifier>{49c2071e-23dc-4531-8983-2f15e8b15144}</UniqueIdentifier>
     </Filter>
-    <Filter Include="科目选择界面\科目">
-      <UniqueIdentifier>{a67a3a34-b2b6-409b-8f83-6dd597d3564c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="科目选择界面\题目">
-      <UniqueIdentifier>{474e4269-2d44-4cbd-b1bd-c588b9abc024}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="科目选择界面\题目\数学">
-      <UniqueIdentifier>{03833e98-6a6f-440b-8d12-50fff281ecee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="题目配置">
+    <Filter Include="界面容器\主界面\科目配置界面">
       <UniqueIdentifier>{978c7c43-dc3e-45c0-be78-e7569805fd12}</UniqueIdentifier>
     </Filter>
-    <Filter Include="题目配置\添加题目">
-      <UniqueIdentifier>{73de6850-fc95-4c4a-aa2e-fb7a3e000b3b}</UniqueIdentifier>
+    <Filter Include="界面容器\答题界面">
+      <UniqueIdentifier>{741d688f-0603-40bd-ba32-e6a62f5517f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="题目配置\科目列表">
-      <UniqueIdentifier>{971fd820-c142-48ed-b892-76c23ae72e99}</UniqueIdentifier>
+    <Filter Include="暂未使用的界面">
+      <UniqueIdentifier>{52d453e1-c490-4267-8b0b-0e3847410ede}</UniqueIdentifier>
     </Filter>
-    <Filter Include="题目配置\科目列表\科目们">
-      <UniqueIdentifier>{b1325fa4-5597-48c8-a754-60a1bfe50637}</UniqueIdentifier>
+    <Filter Include="暂未使用的界面\科目选择界面">
+      <UniqueIdentifier>{77062f24-e534-43de-be9c-b8b8be5eff59}</UniqueIdentifier>
     </Filter>
-    <Filter Include="结束界面">
+    <Filter Include="暂未使用的界面\科目选择界面\科目">
+      <UniqueIdentifier>{a67a3a34-b2b6-409b-8f83-6dd597d3564c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="暂未使用的界面\科目选择界面\题目">
+      <UniqueIdentifier>{474e4269-2d44-4cbd-b1bd-c588b9abc024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="暂未使用的界面\科目选择界面\题目\数学">
+      <UniqueIdentifier>{03833e98-6a6f-440b-8d12-50fff281ecee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="暂未使用的界面\欢迎页">
+      <UniqueIdentifier>{0bb0bc19-291f-4225-8714-bd0c0298dae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\结束界面">
       <UniqueIdentifier>{65b31ca6-364d-45ef-9bd2-f5e3bbd1d412}</UniqueIdentifier>
     </Filter>
-    <Filter Include="题目配置\科目列表\科目们\科目">
+    <Filter Include="封装类与头文件">
+      <UniqueIdentifier>{305d1536-dd46-4787-9a12-bc1515fcbdf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\主界面\科目配置界面\科目筛选界面">
+      <UniqueIdentifier>{c54fbf10-8b9a-437c-9891-dbac3c1a1912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\主界面\科目配置界面\题目编辑界面">
+      <UniqueIdentifier>{92eeec41-bbf3-4cc9-9b17-b5b8f44d1bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\主界面\科目配置界面\科目筛选界面\科目们">
+      <UniqueIdentifier>{b1325fa4-5597-48c8-a754-60a1bfe50637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\主界面\科目配置界面\科目筛选界面\科目们\科目">
       <UniqueIdentifier>{1467b90e-e394-4958-989f-db9d4f2d546e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="题目配置\添加题目\候选题目">
+    <Filter Include="界面容器\主界面\科目配置界面\题目编辑界面\题目们">
+      <UniqueIdentifier>{73de6850-fc95-4c4a-aa2e-fb7a3e000b3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面容器\主界面\科目配置界面\题目编辑界面\题目们\题目">
       <UniqueIdentifier>{82a21369-d4a3-4356-98d0-68ac2158ce9b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -89,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConfigCore.cpp">
-      <Filter>小工具</Filter>
+      <Filter>封装类与头文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar.cpp">
       <Filter>外部库\QtMaterialWidgets</Filter>
@@ -230,56 +223,53 @@
       <Filter>外部库\QtMaterialWidgets</Filter>
     </ClCompile>
     <ClCompile Include="WelcomeUi.cpp">
-      <Filter>欢迎页</Filter>
+      <Filter>暂未使用的界面\欢迎页</Filter>
     </ClCompile>
     <ClCompile Include="SubjectSelectionUi.cpp">
-      <Filter>科目选择界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面</Filter>
     </ClCompile>
     <ClCompile Include="SubjectUi.cpp">
-      <Filter>科目选择界面\科目</Filter>
+      <Filter>暂未使用的界面\科目选择界面\科目</Filter>
     </ClCompile>
     <ClCompile Include="QustionMathUi.cpp">
-      <Filter>科目选择界面\题目\数学</Filter>
-    </ClCompile>
-    <ClCompile Include="MathUi.cpp">
-      <Filter>作答界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面\题目\数学</Filter>
     </ClCompile>
     <ClCompile Include="SettingUi.cpp">
-      <Filter>设置界面</Filter>
+      <Filter>界面容器\主界面\设置界面</Filter>
     </ClCompile>
     <ClCompile Include="StatisticsUi.cpp">
-      <Filter>统计界面</Filter>
-    </ClCompile>
-    <ClCompile Include="FrontPage.cpp">
-      <Filter>主界面</Filter>
-    </ClCompile>
-    <ClCompile Include="MemoryStatus.cpp">
-      <Filter>小工具</Filter>
+      <Filter>界面容器\主界面\统计界面</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MathTopicConf.cpp">
-      <Filter>题目配置</Filter>
-    </ClCompile>
     <ClCompile Include="MathAddQuestion.cpp">
-      <Filter>题目配置\添加题目</Filter>
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面\题目们</Filter>
     </ClCompile>
     <ClCompile Include="QuestionWaiting.cpp">
-      <Filter>题目配置\添加题目\候选题目</Filter>
-    </ClCompile>
-    <ClCompile Include="SubjectList.cpp">
-      <Filter>题目配置\科目列表</Filter>
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面\题目们\题目</Filter>
     </ClCompile>
     <ClCompile Include="SubjectOne.cpp">
-      <Filter>题目配置\科目列表\科目们\科目</Filter>
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面\科目们\科目</Filter>
     </ClCompile>
     <ClCompile Include="SubjectsUi.cpp">
-      <Filter>题目配置\科目列表\科目们</Filter>
-    </ClCompile>
-    <ClCompile Include="SubjectChooser.cpp">
-      <Filter>科目选择界面</Filter>
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面\科目们</Filter>
     </ClCompile>
     <ClCompile Include="EndUi.cpp">
-      <Filter>结束界面</Filter>
+      <Filter>界面容器\结束界面</Filter>
+    </ClCompile>
+    <ClCompile Include="FrontPage.cpp">
+      <Filter>界面容器</Filter>
+    </ClCompile>
+    <ClCompile Include="SubjectChooser.cpp">
+      <Filter>界面容器\主界面</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUi.cpp">
+      <Filter>界面容器\答题界面</Filter>
+    </ClCompile>
+    <ClCompile Include="SubjectList.cpp">
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面</Filter>
+    </ClCompile>
+    <ClCompile Include="MathTopicConf.cpp">
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -407,101 +397,101 @@
       <Filter>外部库\QtMaterialWidgets</Filter>
     </QtMoc>
     <QtMoc Include="WelcomeUi.h">
-      <Filter>欢迎页</Filter>
+      <Filter>暂未使用的界面\欢迎页</Filter>
     </QtMoc>
     <QtMoc Include="SubjectSelectionUi.h">
-      <Filter>科目选择界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面</Filter>
     </QtMoc>
     <QtMoc Include="SubjectUi.h">
-      <Filter>科目选择界面\科目</Filter>
+      <Filter>暂未使用的界面\科目选择界面\科目</Filter>
     </QtMoc>
     <QtMoc Include="QustionMathUi.h">
-      <Filter>科目选择界面\题目\数学</Filter>
-    </QtMoc>
-    <QtMoc Include="MathUi.h">
-      <Filter>作答界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面\题目\数学</Filter>
     </QtMoc>
     <QtMoc Include="SettingUi.h">
-      <Filter>设置界面</Filter>
+      <Filter>界面容器\主界面\设置界面</Filter>
     </QtMoc>
     <QtMoc Include="StatisticsUi.h">
-      <Filter>统计界面</Filter>
-    </QtMoc>
-    <QtMoc Include="FrontPage.h">
-      <Filter>主界面</Filter>
-    </QtMoc>
-    <QtMoc Include="MathTopicConf.h">
-      <Filter>题目配置</Filter>
+      <Filter>界面容器\主界面\统计界面</Filter>
     </QtMoc>
     <QtMoc Include="MathAddQuestion.h">
-      <Filter>题目配置\添加题目</Filter>
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面\题目们</Filter>
     </QtMoc>
     <QtMoc Include="QuestionWaiting.h">
-      <Filter>题目配置\添加题目\候选题目</Filter>
-    </QtMoc>
-    <QtMoc Include="SubjectList.h">
-      <Filter>题目配置\科目列表</Filter>
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面\题目们\题目</Filter>
     </QtMoc>
     <QtMoc Include="SubjectOne.h">
-      <Filter>题目配置\科目列表\科目们\科目</Filter>
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面\科目们\科目</Filter>
     </QtMoc>
     <QtMoc Include="SubjectsUi.h">
-      <Filter>题目配置\科目列表\科目们</Filter>
-    </QtMoc>
-    <QtMoc Include="SubjectChooser.h">
-      <Filter>科目选择界面</Filter>
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面\科目们</Filter>
     </QtMoc>
     <QtMoc Include="EndUi.h">
-      <Filter>结束界面</Filter>
+      <Filter>界面容器\结束界面</Filter>
+    </QtMoc>
+    <QtMoc Include="FrontPage.h">
+      <Filter>界面容器</Filter>
+    </QtMoc>
+    <QtMoc Include="SubjectChooser.h">
+      <Filter>界面容器\主界面</Filter>
+    </QtMoc>
+    <QtMoc Include="MathUi.h">
+      <Filter>界面容器\答题界面</Filter>
+    </QtMoc>
+    <QtMoc Include="SubjectList.h">
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面</Filter>
+    </QtMoc>
+    <QtMoc Include="MathTopicConf.h">
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="WelcomeUi.ui">
-      <Filter>欢迎页</Filter>
+      <Filter>暂未使用的界面\欢迎页</Filter>
     </QtUic>
     <QtUic Include="SubjectSelectionUi.ui">
-      <Filter>科目选择界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面</Filter>
     </QtUic>
     <QtUic Include="SubjectUi.ui">
-      <Filter>科目选择界面\科目</Filter>
+      <Filter>暂未使用的界面\科目选择界面\科目</Filter>
     </QtUic>
     <QtUic Include="QustionMathUi.ui">
-      <Filter>科目选择界面\题目\数学</Filter>
-    </QtUic>
-    <QtUic Include="MathUi.ui">
-      <Filter>作答界面</Filter>
+      <Filter>暂未使用的界面\科目选择界面\题目\数学</Filter>
     </QtUic>
     <QtUic Include="SettingUi.ui">
-      <Filter>设置界面</Filter>
+      <Filter>界面容器\主界面\设置界面</Filter>
     </QtUic>
     <QtUic Include="StatisticsUi.ui">
-      <Filter>统计界面</Filter>
-    </QtUic>
-    <QtUic Include="FrontPage.ui">
-      <Filter>主界面</Filter>
-    </QtUic>
-    <QtUic Include="MathTopicConf.ui">
-      <Filter>题目配置</Filter>
+      <Filter>界面容器\主界面\统计界面</Filter>
     </QtUic>
     <QtUic Include="MathAddQuestion.ui">
-      <Filter>题目配置\添加题目</Filter>
-    </QtUic>
-    <QtUic Include="SubjectList.ui">
-      <Filter>题目配置\科目列表</Filter>
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面\题目们</Filter>
     </QtUic>
     <QtUic Include="SubjectOne.ui">
-      <Filter>题目配置\科目列表\科目们\科目</Filter>
-    </QtUic>
-    <QtUic Include="SubjectChooser.ui">
-      <Filter>科目选择界面</Filter>
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面\科目们\科目</Filter>
     </QtUic>
     <QtUic Include="EndUi.ui">
-      <Filter>结束界面</Filter>
+      <Filter>界面容器\结束界面</Filter>
+    </QtUic>
+    <QtUic Include="FrontPage.ui">
+      <Filter>界面容器</Filter>
+    </QtUic>
+    <QtUic Include="SubjectChooser.ui">
+      <Filter>界面容器\主界面</Filter>
+    </QtUic>
+    <QtUic Include="MathUi.ui">
+      <Filter>界面容器\答题界面</Filter>
+    </QtUic>
+    <QtUic Include="SubjectList.ui">
+      <Filter>界面容器\主界面\科目配置界面\科目筛选界面</Filter>
+    </QtUic>
+    <QtUic Include="MathTopicConf.ui">
+      <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConfigCore.h">
-      <Filter>小工具</Filter>
+      <Filter>封装类与头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar_p.h">
       <Filter>外部库\QtMaterialWidgets</Filter>
@@ -605,17 +595,20 @@
     <ClInclude Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialtheme_p.h">
       <Filter>外部库\QtMaterialWidgets</Filter>
     </ClInclude>
-    <ClInclude Include="MemoryStatus.h">
-      <Filter>小工具</Filter>
-    </ClInclude>
     <ClInclude Include="FunctionCore.h">
-      <Filter>小工具</Filter>
+      <Filter>封装类与头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="resource1.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MathTopicStructs.h">
+      <Filter>封装类与头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MathTopicDefines.h">
+      <Filter>封装类与头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

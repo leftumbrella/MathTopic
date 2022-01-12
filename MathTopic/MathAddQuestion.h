@@ -3,13 +3,7 @@
 #include <QWidget>
 #include <QRegExpValidator>
 #include "ui_MathAddQuestion.h"
-
-struct FORMULA{
-	int left;
-	int oper;
-	int right;
-	int answer;
-};
+#include "MathTopicStructs.h"
 
 class MathAddQuestion : public QWidget
 {
