@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BE825C21-E09B-438C-BDA7-0C0433236689}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_x64</QtInstall>
+    <QtModules>core;gui;widgets;multimedia</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_x64</QtInstall>
+    <QtModules>core;gui;widgets;multimedia</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;$(SolutionDir)Librarys;$(SolutionDir)Librarys\boost\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librarys\boost\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librarys\QtMaterialWidgets;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_);$(SolutionDir)Librarys;$(SolutionDir)Librarys\boost\include;.\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librarys\boost\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialcheckable.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialcheckable_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialoverlaywidget.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialripple.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialrippleoverlay.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstatetransition.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstyle.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialtheme.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialautocomplete.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialautocomplete_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialavatar.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialbadge.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialcheckbox.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialcircularprogress.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialcircularprogress_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialdialog.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialdialog_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialdrawer.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialdrawer_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialfab.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialflatbutton.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialflatbutton_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialiconbutton.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmateriallist.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmateriallistitem.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialmenu.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialmenu_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialpaper.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialprogress.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialprogress_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialradiobutton.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialraisedbutton.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialscrollbar.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialscrollbar_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialslider.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialslider_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialsnackbar.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialsnackbar_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtable.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtabs.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtabs_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield_internal.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle.cpp" />
+    <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle_internal.cpp" />
+    <ClCompile Include="EndUi.cpp" />
+    <ClCompile Include="FrontPage.cpp" />
+    <ClCompile Include="MathAddQuestion.cpp" />
+    <ClCompile Include="MathTopicConf.cpp" />
+    <ClCompile Include="MathUi.cpp" />
+    <ClCompile Include="MemoryStatus.cpp" />
+    <ClCompile Include="QuestionWaiting.cpp" />
+    <ClCompile Include="QustionMathUi.cpp" />
+    <ClCompile Include="SettingUi.cpp" />
+    <ClCompile Include="StatisticsUi.cpp" />
+    <ClCompile Include="SubjectChooser.cpp" />
+    <ClCompile Include="SubjectList.cpp" />
+    <ClCompile Include="SubjectOne.cpp" />
+    <ClCompile Include="SubjectSelectionUi.cpp" />
+    <ClCompile Include="SubjectsUi.cpp" />
+    <ClCompile Include="SubjectUi.cpp" />
+    <ClCompile Include="WelcomeUi.cpp" />
+    <QtRcc Include="..\Librarys\QtMaterialWidgets\resources.qrc" />
+    <QtRcc Include="MathTopic.qrc" />
+    <QtUic Include="EndUi.ui" />
+    <QtUic Include="FrontPage.ui" />
+    <ClCompile Include="ConfigCore.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="MathAddQuestion.ui" />
+    <QtUic Include="MathTopicConf.ui" />
+    <QtUic Include="MathUi.ui" />
+    <QtUic Include="QustionMathUi.ui" />
+    <QtUic Include="SettingUi.ui" />
+    <QtUic Include="StatisticsUi.ui" />
+    <QtUic Include="SubjectChooser.ui" />
+    <QtUic Include="SubjectList.ui" />
+    <QtUic Include="SubjectOne.ui" />
+    <QtUic Include="SubjectSelectionUi.ui" />
+    <QtUic Include="SubjectUi.ui" />
+    <QtUic Include="WelcomeUi.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="EndUi.h" />
+    <ClInclude Include="FunctionCore.h" />
+    <QtMoc Include="SubjectChooser.h" />
+    <QtMoc Include="SubjectsUi.h" />
+    <QtMoc Include="SubjectOne.h" />
+    <QtMoc Include="SubjectList.h" />
+    <QtMoc Include="MathTopicConf.h" />
+    <QtMoc Include="MathAddQuestion.h" />
+    <ClInclude Include="MemoryStatus.h" />
+    <QtMoc Include="QuestionWaiting.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <QtMoc Include="StatisticsUi.h" />
+    <QtMoc Include="SettingUi.h" />
+    <QtMoc Include="MathUi.h" />
+    <QtMoc Include="QustionMathUi.h" />
+    <QtMoc Include="SubjectUi.h" />
+    <QtMoc Include="SubjectSelectionUi.h" />
+    <QtMoc Include="WelcomeUi.h" />
+    <QtMoc Include="FrontPage.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialcheckable.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialcheckable_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialcheckable_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialoverlaywidget.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialripple.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialrippleoverlay.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstatetransition.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstatetransitionevent.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstyle.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialstyle_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialtheme.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\lib\qtmaterialtheme_p.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialautocomplete.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialautocomplete_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialautocomplete_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialavatar.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialavatar_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialbadge.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialbadge_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialcheckbox.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialcheckbox_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialcircularprogress.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialcircularprogress_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialcircularprogress_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialdialog.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialdialog_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialdialog_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialdrawer.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialdrawer_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialdrawer_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialfab.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialfab_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialflatbutton.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialflatbutton_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialflatbutton_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialiconbutton.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialiconbutton_p.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmateriallist.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmateriallistitem.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmateriallistitem_p.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmateriallist_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialmenu.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialmenu_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialmenu_p.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialpaper.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialpaper_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialprogress.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialprogress_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialprogress_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialradiobutton.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialradiobutton_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialraisedbutton.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialraisedbutton_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialscrollbar.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialscrollbar_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialscrollbar_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialslider.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialslider_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialslider_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialsnackbar.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialsnackbar_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialsnackbar_p.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialtable.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialtable_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtabs.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtabs_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialtabs_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield_p.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle.h" />
+    <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle_internal.h" />
+    <ClInclude Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle_p.h" />
+    <ClInclude Include="ConfigCore.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MathTopic.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\image\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

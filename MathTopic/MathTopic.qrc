@@ -1,0 +1,37 @@
+<RCC>
+  <qresource prefix="MathTopic">
+    <file>commit.png</file>
+    <file>question_area.png</file>
+    <file>retry.png</file>
+    <file>add_new.png</file>
+    <file>subject.png</file>
+    <file>btn_over.png</file>
+    <file>select_other.png</file>
+    <file>star_color.png</file>
+    <file>delete.png</file>
+    <file>finish.png</file>
+    <file>add.png</file>
+    <file>data.png</file>
+    <file>edit.png</file>
+    <file>message.wav</file>
+    <file>error.wav</file>
+    <file>ok.wav</file>
+    <file>push.wav</file>
+    <file>question.png</file>
+    <file>qustion.png</file>
+    <file>star.png</file>
+    <file>home.png</file>
+    <file>hide.png</file>
+    <file>start.png</file>
+    <file>next.png</file>
+    <file>return.png</file>
+    <file>Chinese.png</file>
+    <file>English.png</file>
+    <file>Math.png</file>
+    <file>kaoshi.png</file>
+    <file>xunlian.png</file>
+    <file>setting.png</file>
+    <file>close.png</file>
+    <file>actionstatistical.png</file>
+  </qresource>
+</RCC>

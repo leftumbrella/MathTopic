@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrontPage</class>
+ <widget class="QWidget" name="FrontPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1102</width>
+    <height>899</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FrontPage</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="styleSheet">
+      <string notr="true">#stackedWidget{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 166, 183, 255), stop:1 rgba(30, 42, 210, 255));
+}</string>
+     </property>
+     <widget class="WelcomeUi" name="PG_main">
+      <property name="styleSheet">
+       <string notr="true">#PG_main{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 166, 183, 255), stop:1 rgba(30, 42, 210, 255));
+}</string>
+      </property>
+     </widget>
+     <widget class="SubjectChooser" name="WG_SubjectChoose"/>
+     <widget class="SubjectSelectionUi" name="PG_Train"/>
+     <widget class="MathUi" name="PG_math"/>
+     <widget class="SettingUi" name="PG_setting"/>
+     <widget class="StatisticsUi" name="PG_statistics"/>
+     <widget class="MathTopicConf" name="PG_data"/>
+     <widget class="SubjectList" name="PG_subjectsList"/>
+     <widget class="EndUi" name="PG_end"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WelcomeUi</class>
+   <extends>QWidget</extends>
+   <header>welcomeui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SubjectSelectionUi</class>
+   <extends>QWidget</extends>
+   <header location="global">subjectselectionui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MathUi</class>
+   <extends>QWidget</extends>
+   <header>mathui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SettingUi</class>
+   <extends>QWidget</extends>
+   <header>settingui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StatisticsUi</class>
+   <extends>QWidget</extends>
+   <header>statisticsui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MathTopicConf</class>
+   <extends>QWidget</extends>
+   <header>mathtopicconf.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SubjectList</class>
+   <extends>QWidget</extends>
+   <header>subjectlist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SubjectChooser</class>
+   <extends>QWidget</extends>
+   <header>subjectchooser.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EndUi</class>
+   <extends>QWidget</extends>
+   <header>endui.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

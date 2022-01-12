@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MathTopicConf</class>
+ <widget class="QWidget" name="MathTopicConf">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1004</width>
+    <height>845</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MathTopicConf</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>322</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,8,1">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>77</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,7,1,1">
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QtMaterialRaisedButton" name="btn_select">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>选择其他</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:white</string>
+              </property>
+              <property name="text">
+               <string>当前科目名：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QtMaterialTextField" name="LE_name">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QtMaterialCheckable" name="CB_fast">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QCheckBox{color:white}</string>
+              </property>
+              <property name="text">
+               <string>快速模式</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QtMaterialCheckable" name="CB_auto_answer">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:white</string>
+              </property>
+              <property name="text">
+               <string>自动补全答案</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="styleSheet">
+            <string notr="true">QScrollArea{
+background: transparent;
+border:3px dashed white;
+}</string>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>614</width>
+              <height>415</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#scrollAreaWidgetContents{
+background: transparent;
+}</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QuestionWaiting" name="WG_waitting" native="true"/>
+             </item>
+             <item row="1" column="0">
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="MathAddQuestion" name="WG_adder" native="true"/>
+         </item>
+         <item>
+          <widget class="QWidget" name="WG_add" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QtMaterialRaisedButton" name="btn_finish">
+              <property name="font">
+               <font>
+                <family>楷体</family>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>完  成</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>77</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>322</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MathAddQuestion</class>
+   <extends>QWidget</extends>
+   <header>mathaddquestion.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionWaiting</class>
+   <extends>QWidget</extends>
+   <header>questionwaiting.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QtMaterialRaisedButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">qtmaterialraisedbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QtMaterialTextField</class>
+   <extends>QLineEdit</extends>
+   <header location="global">qtmaterialtextfield.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QtMaterialCheckable</class>
+   <extends>QCheckBox</extends>
+   <header location="global">lib/qtmaterialcheckable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MathTopic.qrc"/>
+ </resources>
+ <connections/>
+</ui>

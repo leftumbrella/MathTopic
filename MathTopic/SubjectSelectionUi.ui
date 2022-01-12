@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SubjectSelectionUi</class>
+ <widget class="QWidget" name="SubjectSelectionUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1131</width>
+    <height>819</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SubjectSelectionUi</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="9">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="SubjectUi" name="PG_Subject"/>
+     <widget class="QustionMathUi" name="PG_QuestionMath"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SubjectUi</class>
+   <extends>QWidget</extends>
+   <header>subjectui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QustionMathUi</class>
+   <extends>QWidget</extends>
+   <header>qustionmathui.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
