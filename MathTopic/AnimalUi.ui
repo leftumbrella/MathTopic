@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnimalUi</class>
+ <widget class="QWidget" name="AnimalUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>426</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AnimalUi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="LBA_8">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="LBA_7">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="RBA_7">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QLabel" name="RBA_8">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="LBA_6">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="LBA_5">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" rowspan="2">
+    <widget class="QLabel" name="LBA_10">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" rowspan="2">
+    <widget class="QLabel" name="RBA_10">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QLabel" name="RBA_5">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QLabel" name="RBA_6">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4" rowspan="2">
+    <widget class="QLabel" name="RBA_2">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="LBA_4">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="LBA_2">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="LBA_9">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLabel" name="RBA_9">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="5">
+    <widget class="QLabel" name="RBA_4">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="LBA_3">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="LBA_1">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QLabel" name="RBA_1">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2right.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QLabel" name="RBA_3">
+     <property name="minimumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>96</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:/Resources/image/cow_2left.png&quot;)；</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MathTopic.qrc"/>
+ </resources>
+ <connections/>
+</ui>

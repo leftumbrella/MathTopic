@@ -71,6 +71,24 @@
     <Filter Include="界面容器\主界面\科目配置界面\题目编辑界面\题目们\题目">
       <UniqueIdentifier>{82a21369-d4a3-4356-98d0-68ac2158ce9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="界面容器\答题界面\小动物提示">
+      <UniqueIdentifier>{19b10c21-65e8-405b-a110-50131afd806e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="MathTopic.qrc">
@@ -277,6 +295,9 @@
     <ClCompile Include="JsonMath.cpp">
       <Filter>封装类与头文件</Filter>
     </ClCompile>
+    <ClCompile Include="AnimalUi.cpp">
+      <Filter>界面容器\答题界面\小动物提示</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="..\Librarys\QtMaterialWidgets\qtmaterialappbar.h">
@@ -450,6 +471,9 @@
     <QtMoc Include="MathTopicConf.h">
       <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
     </QtMoc>
+    <QtMoc Include="AnimalUi.h">
+      <Filter>界面容器\答题界面\小动物提示</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="WelcomeUi.ui">
@@ -493,6 +517,9 @@
     </QtUic>
     <QtUic Include="MathTopicConf.ui">
       <Filter>界面容器\主界面\科目配置界面\题目编辑界面</Filter>
+    </QtUic>
+    <QtUic Include="AnimalUi.ui">
+      <Filter>界面容器\答题界面\小动物提示</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

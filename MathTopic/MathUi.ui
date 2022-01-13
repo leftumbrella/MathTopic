@@ -211,6 +211,9 @@
           <widget class="QWidget" name="widget_9" native="true">
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
+             <widget class="AnimalUi" name="WG_animal" native="true"/>
+            </item>
+            <item>
              <widget class="QWidget" name="widget" native="true">
               <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
@@ -748,6 +751,12 @@ font-size:20px;</string>
    <class>QtMaterialIconButton</class>
    <extends>QPushButton</extends>
    <header location="global">qtmaterialiconbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AnimalUi</class>
+   <extends>QWidget</extends>
+   <header>animalui.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

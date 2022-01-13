@@ -280,6 +280,13 @@ void MathUi::Commit() {
 		ui.btn_star->setColor("#a22041");
 		ui.btn_star->click();
 		QString info_str = QStringLiteral("正确答案是 “%1” 哦！").arg(real_answer);
+		int res = ui.WG_animal->setAnimal(_formulas[_question_num - 1].first.left
+			, _formulas[_question_num - 1].first.oper, _formulas[_question_num - 1].first.right);
+		if (res) {
+			ui.WG_animal->show();
+			info_str += QStringLiteral("快看看提示吧！");
+		}
+		
 		ui.LB_info->setText(info_str);
 		QPlaySound(2);
 	}
@@ -701,4 +708,5 @@ void MathUi::Reset() {
 	ui.btn_star->setIcon(QIcon());
 	ui.LB_info->setText(""); 
 	_is_commited = false;
+	ui.WG_animal->hide();
 }

@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/image/rabbit_ts.png</file>
+    <file>Resources/image/cow_2right.png</file>
+    <file>Resources/image/cow_2left.png</file>
+    <file>Resources/image/rabbit.png</file>
+    <file>Resources/image/rabbit_2right.png</file>
     <file>Resources/image/actionstatistical.png</file>
     <file>Resources/sound/error.wav</file>
     <file>Resources/sound/message.wav</file>

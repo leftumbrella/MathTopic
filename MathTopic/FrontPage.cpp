@@ -9,7 +9,8 @@ FrontPage::FrontPage(QWidget *parent)
 	setWindowFlag(Qt::FramelessWindowHint);
 	QDesktopWidget* desktopWidget = QApplication::desktop();
 	QRect clientRect = desktopWidget->availableGeometry();
-	resize(clientRect.width() / 2, clientRect.height() / 3 * 2);
+	resize(clientRect.width() / 3.0*2, clientRect.height() / 10.0*9);
+	move((desktopWidget->width() - this->width()) / 2, (desktopWidget->height() - this->height()) / 2);
 	setAttribute(Qt::WA_TranslucentBackground);//特别注意这句
 
 	connect(ui.PG_main, &WelcomeUi::GoTrain, this, &FrontPage::ShowTrain);

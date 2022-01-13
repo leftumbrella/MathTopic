@@ -151,6 +151,7 @@
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtextfield_internal.cpp" />
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle.cpp" />
     <ClCompile Include="..\Librarys\QtMaterialWidgets\qtmaterialtoggle_internal.cpp" />
+    <ClCompile Include="AnimalUi.cpp" />
     <ClCompile Include="EndUi.cpp" />
     <ClCompile Include="FileTools.cpp" />
     <ClCompile Include="FrontPage.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="WelcomeUi.cpp" />
     <QtRcc Include="..\Librarys\QtMaterialWidgets\resources.qrc" />
     <QtRcc Include="MathTopic.qrc" />
+    <QtUic Include="AnimalUi.ui" />
     <QtUic Include="EndUi.ui" />
     <QtUic Include="FrontPage.ui" />
     <ClCompile Include="ConfigCore.cpp" />
@@ -190,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="EndUi.h" />
+    <QtMoc Include="AnimalUi.h" />
     <ClInclude Include="FileTools.h" />
     <ClInclude Include="FunctionCore.h" />
     <QtMoc Include="SubjectChooser.h" />
